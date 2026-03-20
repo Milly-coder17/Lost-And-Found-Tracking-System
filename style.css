@@ -3,6 +3,7 @@ body{
 }
 
 .topHeader{
+    width: 100%;
     display: flex;
     background-color: #1a5d3b;
     position: sticky;
@@ -42,7 +43,7 @@ body{
     width: 30%;
     padding: 10px 30px;
     border-radius: 80px;
-    margin-left: 20%;
+    margin-left: 0;
     background: rgb(144, 144, 144);
     cursor: text;
     border: 1px rgb(12, 65, 25) solid;
@@ -88,6 +89,8 @@ body{
     transition: transform 0.25s, box-shadow 0.25s;
     display: flex;
     flex-direction: column;
+    border: 1px rgb(12, 65, 25) solid;
+    
 }
 
 .itemCard:hover{
@@ -126,4 +129,64 @@ body{
 
 .categoriesContainer > *:hover {
     background-color: rgb(161, 161, 161);
+}
+
+@media (max-width: 768px) {
+    .topHeader {
+        flex-wrap: wrap;
+        gap: 10px;
+        padding: 10px 15px;
+    }
+
+    .appName {
+        font-size: 18px;
+    }
+
+    #searchBar {
+        width: 100%;
+        margin: 0;
+        order: 3;
+    }
+
+    #searchBar:focus {
+        width: 100%;
+    }
+
+    #reportButton {
+        margin: 0;
+        padding: 8px 15px;
+        font-size: 14px;
+        margin-left: auto;
+    }
+
+    .categoriesContainer {
+        padding: 15px;
+        gap: 8px;
+    }
+
+    .categoriesContainer > * {
+        flex: 0 0 100px;
+        font-size: 12px;
+    }
+
+    .itemsContainer {
+        grid-template-columns: repeat(auto-fill, minmax(170px, 1fr));
+        gap: 15px;
+    }
+
+    .itemCard {
+        height: 230px;
+    }
+
+    .itemCard img {
+        height: 140px;
+    }
+
+    .itemInfo h3 {
+        font-size: 17px;
+    }
+
+    .itemInfo h4 {
+        font-size: 17px;
+    }
 }
