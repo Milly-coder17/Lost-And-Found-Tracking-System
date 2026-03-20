@@ -9,7 +9,7 @@ const items = [
     {name: "Wallet", location: "sa may jollibee", date: "2026-03-07", type: "wallet", image: "brown wallet.png"},
     {name: "Umbrella", location: "Puregold", date: "Tomorrow", type: "umbrella", image: "umbrella.png"},
     {name: "Brilyante ng lupa", location: "Xavier Hall", date: "2026-03-08", type: "other", image: "Brilyante ng lupa.png"},
-    {name: "iPhone 17", location: "Harap ng Daily Joe", date: "2026-03-06", type: "electronics", image: "iPhone 17.png"},
+    {name: "iPhone 17", location: "Harap ng Daily Joe", date: "2026-03-06", type: "electronics", image: "iphone 17.png"},
     {name: "Null", location: "Null", date: "2026-03-06", type: "null", image: "image.png"},
     {name: "Null", location: "Null", date: "2026-03-06", type: "null", image: "image.png"},
     {name: "Null", location: "Null", date: "2026-03-06", type: "null", image: "image.png"},
