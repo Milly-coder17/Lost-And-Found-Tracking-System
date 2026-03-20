@@ -12,7 +12,7 @@ const items = [
     {name: "Blue Cap", location: "ADNU, Bonoan", date: "2026-01-05", type: "accessories", image: "images/Blue Cap.png"},
     {name: "Laptop and keyboard", location: "ADNU, P216", date: "2026-01-05", type: "electronics", image: "images/laptop and keyboard.png"},
     {name: "Books and papers", location: "SM Naga", date: "2026-01-06", type: "schoolitems documents", image: "images/books.png"},
-    {name: "Wallet", location: "ADNU, ADMIN BLDG", date: "2025-06-26", type: "wallet", image: "images/wallet admin bldg.jpeg"},
+    {name: "Wallet ni Ma'am Wisa", location: "ADNU, ADMIN BLDG", date: "2025-06-26", type: "wallet", image: "images/wallet admin bldg.jpeg"},
     {name: "Black cap", location: "Crispy King", date: "2025-07-04", type: "accessories", image: "images/black cap.jpg"},
     {name: "White and Black Shirts", location: "ADNU, Arrupe", date: "2025-03-11", type: "clothing", image: "images/shirts.jpg"},
     {name: "Black wallet", location: "ADNU, Main Gate", date: "2025-03-11", type: "wallet", image: "images/black wallet.jpeg"},
