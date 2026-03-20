@@ -14,7 +14,7 @@ const items = [
     {name: "Books and papers", location: "SM Naga", date: "2026-01-06", type: "schoolitems documents", image: "images/books.png"},
     {name: "Wallet", location: "ADNU, ADMIN BLDG", date: "2025-06-26", type: "wallet", image: "images/wallet admin bldg.jpeg"},
     {name: "Black cap", location: "Crispy King", date: "2025-07-04", type: "accessories", image: "images/black cap.jpg"},
-    {name: "White and Black Shirts", location: "ADNU, Arrupe Convention Hall", date: "2025-03-11", type: "clothing", image: "images/shirts.jpg"},
+    {name: "White and Black Shirts", location: "ADNU, Arrupe", date: "2025-03-11", type: "clothing", image: "images/shirts.jpg"},
     {name: "Black wallet", location: "ADNU, Main Gate", date: "2025-03-11", type: "wallet", image: "images/black wallet.jpeg"},
     {name: "Coffee Bottle", location: "Magsaysay Starbucks", date: "2025-09-22", type: "tumbler", image: "images/missing coffee.png"},
     {name: "Watch", location: "Ateneo Avenue 7/11", date: "2025-03-10", type: "accessories", image: "images/watch.jpg"},
