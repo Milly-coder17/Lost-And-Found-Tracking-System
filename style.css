@@ -2,184 +2,255 @@
     box-sizing: border-box;
 }
 
-body{
+body {
     margin: 0;
+    background-color: #f8fafc;
+    font-family: 'Bona Nova', serif;
 }
 
-.topHeader{
+.topHeader {
     width: 100%;
     display: flex;
-    background-color: #1a5d3b;
+    background: linear-gradient(135deg, #064e3b 0%, #10b981 100%);
     position: sticky;
+    top: 0;
+    z-index: 1000;
     align-items: center;
     gap: 20px;
-    padding: 10px 30px;
-    padding-bottom: 40px;
+    padding: 3px 40px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
 }
 
-.appNameContainer{
+.appNameContainer {
+    display: flex;
+    align-items: center;
+    flex-shrink: 0;
+}
+
+.appNameContainer img {
+    filter: drop-shadow(0 2px 4px rgba(0,0,0,0.2));
+    display: block;
+}
+
+#searchContainer {
+    display: flex;
+    align-items: stretch;
+    width: 100%;
+    max-width: 400px;
+    margin-left: 20px;
+}
+
+#searchBar {
+    flex: 1;
+    padding: 12px 20px;
+    border-top-left-radius: 50px;
+    border-bottom-left-radius: 50px;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    border-right: none;
+    background: rgba(255, 255, 255, 0.2);
     color: white;
-    font-family: "Cal Sans", sans-serif;
+    font-family: "Bona Nova", serif;
+    transition: all 0.4s ease;
+    font-size: 16px;
 }
 
-.nameHeader {
-    color: rgb(216, 216, 216);
-}
-
-#reportButton{
-    font-family: "Bona Nova", sans-serif;
-    margin-left: auto;
-    margin-right: 30px;
-    background-color: white;
-    cursor: pointer;
-    padding: 10px 25px;
-    border-radius: 10px;
-    border: 1px solid rgb(12, 65, 25);
-    color: rgb(12, 65, 25);
-    transition: background-color 0.25s;
-}
-
-#reportButton:hover{
-    background-color: rgb(161, 161, 161);
-}
-
-#searchBar{
-    font-family: "Bona Nova", sans-serif;
-    width: 30%;
-    padding: 10px 30px;
-    border-radius: 80px;
-    margin-left: 0;
-    background: rgb(144, 144, 144);
-    cursor: text;
-    border: 1px rgb(12, 65, 25) solid;
-    transition: all 0.3s ease;
+#searchBar::placeholder {
+    color: rgba(255, 255, 255, 0.7);
 }
 
 #searchBar:focus {
     outline: none;
     background: white;
-    color: #1e293b;
-    width: 40%;
+    color: #064e3b;
 }
 
-#typeFilter{
-    font-family: "Bona Nova", sans-serif;
-    padding: 10px 30px;
-    border-radius: 10px;
+#searchBar:focus + #searchIcon {
+    background: white;
+    color: #064e3b;
+    border-left: none;
+}
+
+#searchIcon {
+    padding: 0 20px;
+    font-size: 18px;
+    color: white;
     cursor: pointer;
-    border: 1px rgb(12, 65, 25) solid;
-}
-
-.itemsWrapper{
+    background: rgba(255, 255, 255, 0.2);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    border-left: none;
+    border-top-right-radius: 50px;
+    border-bottom-right-radius: 50px;
     display: flex;
+    align-items: center;
     justify-content: center;
-    padding: 20px;
-    background-color: rgb(255, 255, 255);
+    transition: all 0.4s ease;
 }
 
-.itemsContainer{
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
-    gap: 20px;
-    max-width: 1500px;
-    width: 100%;
+#searchIcon:hover {
+    background: rgba(255, 255, 255, 0.35);
 }
 
-.itemCard{
-    border: 1px rgb(230, 230, 230) solid;
-    border-radius: 20px;
-    height: 270px;
-    overflow: hidden;
+#reportButton {
+    font-family: "Cal Sans", sans-serif;
+    margin-left: auto;
+    background-color: #ffffff;
     cursor: pointer;
-    transition: transform 0.25s, box-shadow 0.25s;
-    display: flex;
-    flex-direction: column;
-    border: 1px rgb(12, 65, 25) solid;
+    padding: 12px 28px;
+    border-radius: 12px;
+    border: none;
+    color: #064e3b;
+    font-weight: 700;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    white-space: nowrap;
 }
 
-.itemCard:hover{
-    transform: translateY(-10px);
-    box-shadow: 0 10px 20px rgba(0,0,0,0.15);
-}
-
-.itemCard img{
-    width: 100%;
-    height: 170px;
-    object-fit: cover;
-}
-
-.itemInfo {
-    line-height: 2px;
-    font-weight: 5px;
-    font-family: Arial, Helvetica, sans-serif;
-    margin-left: 10px;
-    word-wrap: break-word;
-    overflow-wrap: break-word;
+#reportButton:hover {
+    background-color: #ecfdf5;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 12px rgba(0,0,0,0.15);
 }
 
 .categoriesContainer {
     display: flex;
-    padding: 40px 40px 30px 40px;
-    gap: 10px;
+    padding: 30px 40px;
+    gap: 12px;
     overflow-x: auto;
-    border-top-left-radius: 30px;
-    border-top-right-radius: 30px;
-    transform: translateY(-30px);
-    background-color: white;
+    background-color: #f8fafc;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+    position: sticky;
+    top: 116px;
+    z-index: 999;
 }
 
-.categoriesContainer > * {
-    flex: 0 0 130px; 
-    padding: 10px 0px;
-    border-radius: 10px;
-    border: 1px solid rgb(12, 65, 25);
+.categoriesContainer::-webkit-scrollbar {
+    display: none;
+}
+
+.categoriesContainer button {
+    flex: 0 0 auto;
+    padding: 10px 24px;
+    border-radius: 100px;
+    border: 1px solid #e2e8f0;
+    background: white;
+    color: #475569;
+    font-family: "Bona Nova", sans-serif;
+    font-weight: 600;
     cursor: pointer;
-    transition: background-color 0.25s;
+    transition: all 0.2s ease;
 }
 
-.categoriesContainer > *:hover {
-    background-color: rgb(161, 161, 161);
+.categoriesContainer button:hover {
+    border-color: #10b981;
+    color: #10b981;
+    background: #f0fdf4;
+}
+
+.itemsWrapper {
+    padding: 0 40px 40px 40px;
+}
+
+.itemsContainer {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+    gap: 25px;
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
+.itemCard {
+    background: white;
+    border: 1px solid #f1f5f9;
+    border-radius: 24px;
+    min-height: 320px;
+    overflow: hidden;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
+    display: flex;
+    flex-direction: column;
+}
+
+.itemCard:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1);
+}
+
+.itemCard img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+    border-bottom: 1px solid #f1f5f9;
+}
+
+.itemInfo {
+    padding: 15px;
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+
+.itemInfo h3 {
+    margin: 0;
+    font-size: 1.1rem;
+    color: #1e293b;
+    font-family: "Cal Sans", sans-serif;
+}
+
+.itemInfo h4 {
+    margin: 0;
+    font-size: 0.85rem;
+    color: #64748b;
+    font-weight: 400;
+}
+
+.location {
+    color: #059669 !important;
+    font-weight: 600 !important;
 }
 
 @media (max-width: 768px) {
     .topHeader {
-        flex-wrap: wrap;
-        gap: 10px;
-        padding: 10px 15px;
-        padding-bottom: 60px;
+        display: flex;
+        flex-direction: row; 
+        flex-wrap: wrap; 
+        justify-content: space-between;
+        align-items: center;
+        padding: 15px 20px;
+        gap: 15px;
     }
 
-    .appName {
-        font-size: 18px;
-    }
-
-    #searchBar {
-        width: 100%;
+    .appNameContainer {
         margin: 0;
-        order: 3;
+        flex: 0 1 auto;
     }
 
-    #searchBar:focus {
-        width: 100%;
+    .appNameContainer img {
+        height: 70px !important; 
     }
 
     #reportButton {
         margin: 0;
+        flex: 0 0 auto;
         padding: 8px 15px;
         font-size: 14px;
-        margin-left: auto;
+        width: auto; 
+    }
+
+    #searchContainer {
+        width: 100%;
+        order: 3;
+        margin: 0;
+        max-width: none;
     }
 
     .categoriesContainer {
-        padding: 15px;
-        gap: 8px;
-        padding: 40px 40px 30px 20px;
-        transform: translateY(-30px);
+        padding: 20px 15px;
     }
 
-    .categoriesContainer > * {
-        flex: 0 0 100px;
-        font-size: 12px;
+    .itemsWrapper {
+        padding: 0 15px 20px 15px;
     }
 
     .itemsContainer {
@@ -188,18 +259,6 @@ body{
     }
 
     .itemCard {
-        height: 230px;
-    }
-
-    .itemCard img {
-        height: 140px;
-    }
-
-    .itemInfo h3 {
-        font-size: 17px;
-    }
-
-    .itemInfo h4 {
-        font-size: 17px;
+        min-height: 260px;
     }
 }
