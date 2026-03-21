@@ -6,18 +6,18 @@ const categoryButtons = document.querySelectorAll(".categoriesContainer button")
 let currentSelectedType = "AllTypes";
 
 const items = [
-    {name: "4 Tumblers", location: "Covered Court", date: "2025-12-16", type: "tumbler", image: "images/Bottles.jpeg"},
-    {name: "3 Umbrellas", location: "Library", date: "2025-12-19", type: "umbrella", image: "images/Umbrellas.jpeg"},
-    {name: "Type C Charger", location: "Bonoan", date: "2026-03-07", type: "electronics", image: "images/charger.png"},
-    {name: "Blue Cap", location: "Bonoan", date: "2026-01-05", type: "accessories", image: "images/Blue Cap.png"},
-    {name: "Laptop and keyboard", location: "P216", date: "2026-01-05", type: "electronics", image: "images/laptop and keyboard.png"},
-    {name: "Books and papers", location: "Library", date: "2026-01-06", type: "schoolitems documents", image: "images/books.png"},
-    {name: "Wallet", location: "ADMIN BLDG", date: "2025-06-26", type: "wallet", image: "images/wallet admin bldg.jpeg"},
-    {name: "Black cap", location: "P216", date: "2025-07-04", type: "accessories", image: "images/black cap.jpg"},
-    {name: "White and Black Shirts", location: "Arrupe Convention Hall", date: "2025-03-11", type: "clothing", image: "images/shirts.jpg"},
-    {name: "Black wallet", location: "Main Gate", date: "2025-03-11", type: "wallet", image: "images/black wallet.jpeg"},
+    {name: "4 Tumblers", location: "ADNU, Covered Court", date: "2025-12-16", type: "tumbler", image: "images/Bottles.jpeg"},
+    {name: "3 Umbrellas", location: "E-Mall 2F", date: "2025-12-19", type: "umbrella", image: "images/Umbrellas.jpeg"},
+    {name: "Type C Charger", location: "ADNU, Bonoan", date: "2026-03-07", type: "electronics", image: "images/charger.png"},
+    {name: "Blue Cap", location: "SM, World Of Fun", date: "2026-01-05", type: "accessories", image: "images/Blue Cap.png"},
+    {name: "Laptop and keyboard", location: "ADNU, P216", date: "2026-01-05", type: "electronics", image: "images/laptop and keyboard.png"},
+    {name: "Books and papers", location: "ADNU, Library", date: "2026-01-06", type: "schoolitems documents", image: "images/books.png"},
+    {name: "Wallet", location: "ADNU, ADMIN BLDG", date: "2025-06-26", type: "wallet", image: "images/wallet admin bldg.jpeg"},
+    {name: "Black cap", location: "Harap ng Daily Joe", date: "2025-07-04", type: "accessories", image: "images/black cap.jpg"},
+    {name: "White and Black Shirts", location: "ADNU, Arrupe Convention Hall", date: "2025-03-11", type: "clothing", image: "images/shirts.jpg"},
+    {name: "Black wallet", location: "ADNU, Main Gate", date: "2025-03-11", type: "wallet", image: "images/black wallet.jpeg"},
     {name: "Coffee Bottle", location: "Starbucks", date: "2025-09-22", type: "tumbler", image: "images/missing coffee.png"},
-    {name: "Watch", location: "Covered Court", date: "2025-03-10", type: "accessories", image: "images/watch.jpg"},
+    {name: "Watch", location: "ADNU, Covered Court", date: "2025-03-10", type: "accessories", image: "images/watch.jpg"},
 ];
 
 function renderItems(itemArray) {
